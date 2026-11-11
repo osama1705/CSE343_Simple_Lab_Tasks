@@ -1,0 +1,57 @@
+/* Lab 3: small, simple design */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, sans-serif;
+  background: #eaf2ff;
+}
+
+.calculator {
+  width: min(92vw, 340px);
+  padding: 24px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 10px 30px #25334a20;
+}
+
+h1 { margin: 0; font-size: 24px; }
+.subtitle { margin: 8px 0 22px; color: #69788e; font-size: 13px; }
+
+.display {
+  padding: 18px;
+  margin-bottom: 16px;
+  min-height: 74px;
+  border-radius: 12px;
+  background: #17263e;
+  color: white;
+  text-align: right;
+  font-size: 34px;
+  overflow-wrap: anywhere;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 9px;
+}
+
+button {
+  height: 56px;
+  border: 0;
+  border-radius: 12px;
+  background: #eff3f9;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover { filter: brightness(0.95); }
+button:focus-visible { outline: 3px solid #3c83f6; outline-offset: 2px; }
+.utility { background: #dde6f3; }
+.operator { background: #bcd6ff; color: #1654a4; }
+.equals { background: #347de6; color: white; }
+.zero { grid-column: span 2; }
+.hint { margin: 18px 0 0; text-align: center; color: #6b7790; font-size: 12px; }
